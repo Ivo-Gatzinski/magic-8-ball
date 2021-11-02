@@ -1,0 +1,28 @@
+[
+    {
+      "question": "Should I go to gym tonight?",
+      "answer": "You should",
+      "user_id": 1
+    },
+    {
+      "question": "What should I get for dinner",
+      "answer": "Anything you want",
+      "user_id": 2
+    },
+    {
+      "question": "What's the most amazing command in the world?",
+      "answer": "Hello World!",
+      "user_id": 3
+    },
+    {
+        "question": "Movie night or game night?",
+        "answer": "night night",
+        "user_id": 2
+      },
+      {
+        "question": "Where is the lamb sauce?",
+        "answer": "I don't know",
+        "user_id": 3
+      }
+
+  ]
