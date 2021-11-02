@@ -15,6 +15,7 @@ User.init(
     date: {
       type: DataTypes.DATE,
       allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     question: {
       type: DataTypes.STRING,
