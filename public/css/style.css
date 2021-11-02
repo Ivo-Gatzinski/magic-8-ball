@@ -1,3 +1,13 @@
+.main {
+  padding: 3%;
+}
+
+.blackbar {
+  padding: 0%;
+  border-radius: 0%;
+}
+
+
 .btn {
   background-color: #008cba;
   border: none;
