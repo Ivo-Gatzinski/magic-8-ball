@@ -15,3 +15,18 @@
   background-color: #e7e7e7;
   color: black;
 }
+
+.navbar.navbar-1 .navbar-toggler-icon {
+  background-image: url("https://mdbcdn.b-cdn.net/img/svg/hamburger6.svg?color=000");
+}
+
+light-font .breadcrumb-item + .breadcrumb-item::before {
+  color: #fff;
+}
+.light-font .breadcrumb-item.active {
+  color: #cfd8dc;
+}
+
+.blackbg {
+  background-color: black;
+}
