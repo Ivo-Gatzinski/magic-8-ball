@@ -2,9 +2,9 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 // create our User model
-class User extends Model {}
+class History extends Model {}
 
-User.init(
+History.init(
   {
     id: {
       type: DataTypes.INTEGER,

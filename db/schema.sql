@@ -1,3 +1,4 @@
 -- drop database if exists DB_NAME;
-drop database if exists magic8ball_db
-create database magic8ball_db;
+drop database if exists user8_db;
+create database user8_db;
+USE user8_db;
