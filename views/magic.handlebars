@@ -1,0 +1,23 @@
+<nav aria-label="breadcrumb blackbar">
+  <ol class="breadcrumb blackbg">
+    <li class="breadcrumb-item"><a class="white-text" href="/">Home</a></li>
+    <li class="breadcrumb-item active">
+      {{#if isLoggedIn}}
+      Logout
+      {{/if}}
+    </li>
+  </ol>
+</nav>
+
+<h2>Ask Me a Question!</h2>
+
+<form class='question-form'>
+  <label for='question'>Question</label><br />
+  <input type='text' name='question' id='question' /><br />
+</form>
+
+<a href="/api/users/answer"><img src="images/8ball.png" alt="8 ball image"></a>
+
+<p>{{Answer goes here}}</p>
+
+<script src="/js/login.js"></script>
