@@ -8,10 +8,10 @@
 
 <h1>You ask, I decide!</h1>
 {{#if isLoggedIn}}
-  <a href='/api/users//magic'><img src="images/8ball.png" alt="magic 8 ball image"></img></a>
+  <a href='/magic'><img src="images/8ball.png" alt="magic 8 ball image"></img></a>
 {{/if}}
 
 {{#unless isLoggedIn}}
-  <a href='/api/users/magic'><img src="images/8ball.png" alt="magic 8 ball image"></img></a>
+  <a href='/magic'><img src="images/8ball.png" alt="magic 8 ball image"></img></a>
   <p>Please <a class='btn' href='/signup'>Sign Up</a> or <a class='btn' href='/signup'>Login</a></p>
 {{/unless}}

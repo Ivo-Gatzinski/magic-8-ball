@@ -1,5 +1,9 @@
 module.exports = {
-  // add helper functions for handlebars here
-  // Example:
-  // json: object => JSON.stringify(object, null, 4),
+  // add helper function for picking random answer for handlebars here
+  answer: "NOT THE ANSWER"
+// const array of answers
+// pick random answer from array
+// return random answer
+
+
 };

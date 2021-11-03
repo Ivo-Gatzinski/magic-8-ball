@@ -13,11 +13,9 @@
 
 <form class='question-form'>
   <label for='question'>Question</label><br />
-  <input type='text' name='question' id='question' /><br />
+  <input type='text' name='question' id='question' action="put"/><br/>
+<img src="/images/8ball.png" alt="8 ball image" action="put"></img>
 </form>
-
-<a href="/api/users/answer"><img src="images/8ball.png" alt="8 ball image"></a>
-
-<p>{{Answer goes here}}</p>
-
-<script src="/js/login.js"></script>
+<p> ANSWER GOES HERE FROM HELPERS
+  {{ answer }}
+  </p>
