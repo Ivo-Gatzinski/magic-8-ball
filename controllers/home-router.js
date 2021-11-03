@@ -63,8 +63,13 @@ router.get('/history', withAuth, async (req, res) => {
       isLoggedIn: req.session.isLoggedIn,
       user: userData
     });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
+  }
+});
 
-    router.get('/magic', withAuth, async (req, res) => {
+router.get('/magic', withAuth, async (req, res) => {
   try {
     let user;
     if (req.session.isLoggedIn) {
@@ -83,4 +88,6 @@ router.get('/history', withAuth, async (req, res) => {
     res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
   }
 });
+
+
 module.exports = router;
