@@ -6,6 +6,7 @@ const sequelize = require('./config/connection');
 const router = require('./controllers');
 const helpers = require('./util/helpers');
 const sessionMiddleware = require('./config/session');
+const { clog } = require("./middleware/clog");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -17,6 +18,9 @@ app.engine('handlebars', exphbs({ helpers }));
 app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Import custom middleware, "cLog"
+app.use(clog);
 
 // connect routes
 app.use(router);

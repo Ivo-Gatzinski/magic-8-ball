@@ -63,15 +63,24 @@ router.get('/history', withAuth, async (req, res) => {
       isLoggedIn: req.session.isLoggedIn,
       user: userData
     });
-    console.log ({
-      title: 'History Page',
+
+    router.get('/magic', withAuth, async (req, res) => {
+  try {
+    let user;
+    if (req.session.isLoggedIn) {
+      user = await User.findByPk(req.session.userId, {
+        exclude: ['password'],
+        raw: true,
+      });
+    }
+    res.render('magic', {
+      title: 'Ask, and Ye Shall Receive!',
       isLoggedIn: req.session.isLoggedIn,
-      user: userData
+      user,
     });
   } catch (error) {
     console.error(error);
     res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
   }
 });
-
 module.exports = router;
