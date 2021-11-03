@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, History } = require('../models');
+const withAuth = require('../util/withAuth');
 
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
@@ -35,6 +36,42 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
+});
+
+router.get('/history', withAuth, async (req, res) => {
+  // res.render('history', {title: 'History Page'});
+  try {
+    const user = await User.findByPk(req.session.userId, {
+      exclude: ['password'],
+      
+      include: [
+        {
+          model: History,
+          attributes: [
+            'id',
+            'date',
+            'question',
+            'answer',
+          ],
+        },
+      ],
+    });
+    // res.send(JSON.stringify(user));
+    const userData = user.get({ plain: true });
+    res.render('history', {
+      title: 'History Page',
+      isLoggedIn: req.session.isLoggedIn,
+      user: userData
+    });
+    console.log ({
+      title: 'History Page',
+      isLoggedIn: req.session.isLoggedIn,
+      user: userData
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
+  }
 });
 
 module.exports = router;
