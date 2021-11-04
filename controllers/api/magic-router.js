@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const withAuth = require("../../util/withAuth");
 const { History } = require("../../models");
-const helper = require("../../util/helpers");
+const helper = require("../../util/randomAnswerGenerator");
 
 
 router.post("/", withAuth, async (req, res) => {
@@ -10,7 +10,7 @@ router.post("/", withAuth, async (req, res) => {
   
   try {
     const user_id = req.session.userId;
-    const answer = helper;
+    const answer = helper();
   
    const history = await History.create({
       question: question,
