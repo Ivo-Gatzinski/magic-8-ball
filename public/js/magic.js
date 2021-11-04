@@ -19,6 +19,7 @@ const handleAnswer = async (event) => {
 
     const answerHTML = document.querySelector("#answer");
     answerHTML.innerHTML = data.answer;
+    answerHTML.setAttribute("class","animate__animated animate__rollIn");
   } catch (error) {
     console.log(error);
   }
