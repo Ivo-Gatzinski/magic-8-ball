@@ -31,28 +31,18 @@ light-font .breadcrumb-item + .breadcrumb-item::before {
   font-size: 300%;
 }
 
-.btn {
-  background-color: #008cba;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.btn-logout {
-  padding: 10px 28px;
-  background-color: #e7e7e7;
-  color: black;
-}
-
 .navbar.navbar-1 .navbar-toggler-icon {
   background-image: url("https://mdbcdn.b-cdn.net/img/svg/hamburger6.svg?color=000");
 }
 
 .blackbg {
   background-color: black;
+}
+
+@media screen and (max-width: 475px) {
+
+  .image {
+    width: 50%;
+  }
+
 }
