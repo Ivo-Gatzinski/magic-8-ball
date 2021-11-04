@@ -1,18 +1,20 @@
-<div class="light-font blackbar">
+<div class="light-font">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb blackbg">
       <li class="breadcrumb-item active">Home</li>
     </ol>
   </nav>
 </div>
-
-<h1>You ask, I decide!</h1>
+<section class="content">
 {{#if isLoggedIn}}
-  <a href='/magic'><img src="images/8ball.png" alt="magic 8 ball image"></img></a>
-  <div>{{user.username}}</div>
+  <div class="user"><p>Welcome, {{user.username}}!<p></div>
 {{/if}}
 
+<h1>You ask, I decide!</h1>
+
+<a href='/magic'><img src="images/8ball.png" alt="magic 8 ball image"></img></a>
+
 {{#unless isLoggedIn}}
-  <a href='/magic'><img src="images/8ball.png" alt="magic 8 ball image"></img></a>
   <p>Please <a class='btn' href='/signup'>Sign Up</a> or <a class='btn' href='/signup'>Login</a></p>
 {{/unless}}
+</section>

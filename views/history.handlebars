@@ -1,14 +1,13 @@
-<nav aria-label="breadcrumb blackbar">
+<nav aria-label="breadcrumb">
   <ol class="breadcrumb blackbg">
     <li class="breadcrumb-item"><a class="white-text" href="/">Home</a></li>
     <li class="breadcrumb-item active">History</li>
   </ol>
 </nav>
 
-
-<h1>{{user.username}}</h1>
-
-
+<section class="content">
+<h1 class="user"> Hello, {{user.username}}! </h1>
 {{#each user.histories as |history|}}
     {{> history-details}}
 {{/each}}
+</section>

@@ -1,12 +1,35 @@
-.main {
+:root {
+  --pink: rgb(252, 120, 221);
+  --neonpink: rgb(225, 1, 173);
+  
+}
+
+light-font .breadcrumb-item + .breadcrumb-item::before {
+  color: var(--neonpink);
+}
+.light-font .breadcrumb-item.active {
+  color: var(--pink);
+}
+
+.content {
   padding: 3%;
 }
 
-.blackbar {
-  padding: 0%;
+.breadcrumb {
   border-radius: 0%;
 }
 
+.user {
+  color: var(--pink);
+  font-weight: 900;
+  font-size: 300%;
+}
+
+#answer {
+  color: var(--pink);
+  font-weight: 900;
+  font-size: 300%;
+}
 
 .btn {
   background-color: #008cba;
@@ -28,13 +51,6 @@
 
 .navbar.navbar-1 .navbar-toggler-icon {
   background-image: url("https://mdbcdn.b-cdn.net/img/svg/hamburger6.svg?color=000");
-}
-
-light-font .breadcrumb-item + .breadcrumb-item::before {
-  color: #fff;
-}
-.light-font .breadcrumb-item.active {
-  color: #cfd8dc;
 }
 
 .blackbg {
