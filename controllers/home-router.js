@@ -2,14 +2,6 @@ const router = require('express').Router();
 const { User, History } = require('../models');
 const withAuth = require('../util/withAuth');
 
-// use withAuth middleware to redirect from protected routes.
-// const withAuth = require("../util/withAuth");
-
-// example of a protected route
-// router.get("/users-only", withAuth, (req, res) => {
-//   // ...
-// });
-
 router.get('/', async (req, res) => {
   try {
     let user;
@@ -20,7 +12,7 @@ router.get('/', async (req, res) => {
       });
     }
     res.render('home', {
-      title: 'Home Page',
+      title: 'Home',
       isLoggedIn: req.session.isLoggedIn,
       user,
     });
@@ -39,7 +31,6 @@ router.get('/signup', (req, res) => {
 });
 
 router.get('/history', withAuth, async (req, res) => {
-  // res.render('history', {title: 'History Page'});
   try {
     const user = await User.findByPk(req.session.userId, {
       exclude: ['password'],
@@ -59,7 +50,7 @@ router.get('/history', withAuth, async (req, res) => {
     // res.send(JSON.stringify(user));
     const userData = user.get({ plain: true });
     res.render('history', {
-      title: 'History Page',
+      title: 'History',
       isLoggedIn: req.session.isLoggedIn,
       user: userData
     });
