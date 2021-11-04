@@ -18,6 +18,7 @@ light-font .breadcrumb-item + .breadcrumb-item::before {
 
 button {
   border: none;
+  border-radius: 50%;
   background: none;
 }
 
@@ -54,6 +55,7 @@ input {
   color: var(--pink);
   font-weight: 900;
   font-size: 300%;
+  height: 100px;
 }
 
 .navbar.navbar-1 .navbar-toggler-icon {
@@ -68,8 +70,7 @@ input {
 
   .image {
     width: 50%;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin: 35px;
   }
   input {
     background: rgb(255, 191, 231);
@@ -87,8 +88,7 @@ input {
 @media screen and (min-width: 476px) {
 
   .image {
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin: 35px;
   }
 
   input {
