@@ -5,6 +5,7 @@ const path = require('path');
 const sequelize = require('./config/connection');
 const router = require('./controllers');
 const helpers = require('./util/helpers');
+const datehelper = require('./util/datehelper');
 const sessionMiddleware = require('./config/session');
 const { clog } = require("./middleware/clog");
 
@@ -15,6 +16,7 @@ const app = express();
 app.use(sessionMiddleware);
 app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', exphbs({ helpers }));
+app.engine('handlebars', exphbs({ datehelper }));
 app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

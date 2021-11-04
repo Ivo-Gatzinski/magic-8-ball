@@ -2,23 +2,13 @@
    <!-- Card content -->
   <div class="card-body">
     <!-- Title -->
-    <h4 class="card-title"><a>{{{date}}}</a></h4>
+    <h4 class="card-title"><a>{{formatDate userData.date}}</a></h4>
     <!-- Text -->
-    <p class="card-text">{{{question}}}</p>
-    <p class="card-text">{{{answer}}}</p>
+    <p class="card-text">{{question}}</p>
+    <p class="card-text">{{answer}}</p>
     <!-- Button for delete if needed-->
     {{!-- <a href="#" class="btn btn-primary">Button</a> --}}
   </div>
 </div>
 
-
-{{!-- <section class='card'>
-  <a href='/painting/{{id}}'>
-    <header>{{title}}</header>
-
-    <div class='card-body'>
-      <img src='/images/{{filename}}' alt='{{description}}' />
-      <p>By: {{artist}}</p>
-    </div>
-  </a>
-</section> --}}
+{{!-- <script src="/util/datehelper.js"></script> --}}
