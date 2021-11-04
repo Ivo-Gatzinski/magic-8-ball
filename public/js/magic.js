@@ -1,6 +1,10 @@
 const handleAnswer = async (event) => {
   event.preventDefault();
   try {
+    const answerHTML = document.querySelector("#answer");
+    answerHTML.classList.remove("animate__animated");
+    answerHTML.classList.remove("animate__rollIn");
+    answerHTML.innerHTML ='';
     const question = document.querySelector("#question").value.trim();
     const response = await fetch("/api/magic", {
       method: "POST",
@@ -17,9 +21,12 @@ const handleAnswer = async (event) => {
 
     const data = await response.json();
 
-    const answerHTML = document.querySelector("#answer");
+    answerHTML.classList.add("animate__animated");
+    answerHTML.classList.add("animate__rollIn");
     answerHTML.innerHTML = data.answer;
-    answerHTML.setAttribute("class","animate__animated animate__rollIn");
+    // answerHTML.removeAttribute("class");
+    // answerHTML.setAttribute("class","animate__animated animate__rollIn");
+
   } catch (error) {
     console.log(error);
   }
