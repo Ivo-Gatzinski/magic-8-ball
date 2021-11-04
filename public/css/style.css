@@ -75,6 +75,11 @@ input {
     border-radius: 5px;
     width: 50%;
   }
+  .navbar-brand {
+    font-size: 200%;
+    font-weight: bolder;
+  }
+
 
 }
 
