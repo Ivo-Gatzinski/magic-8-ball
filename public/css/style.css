@@ -11,6 +11,31 @@ light-font .breadcrumb-item + .breadcrumb-item::before {
   color: var(--pink);
 }
 
+.navbar-brand {
+  font-size: 300%;
+  font-weight: bolder;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+input {
+  background: rgb(255, 191, 231);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.label {
+  text-align: left;
+}
+
+.question-form, .signup-form, .login-form {
+  margin: 25px;
+}
+
+
 .content {
   padding: 3%;
 }
@@ -43,6 +68,26 @@ light-font .breadcrumb-item + .breadcrumb-item::before {
 
   .image {
     width: 50%;
+    margin-top: 35px;
+  }
+  input {
+    background: rgb(255, 191, 231);
+    border-radius: 5px;
+    width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 476px) {
+
+  .image {
+    margin-top: 35px;
+  }
+
+  input {
+    background: rgb(255, 191, 231);
+    border-radius: 5px;
+    width: 35%;
   }
 
 }
