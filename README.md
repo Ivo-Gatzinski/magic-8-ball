@@ -1,4 +1,13 @@
-# Magic 8 Ball
+# Magic 8 Ball 🎱
+
+## Table of Contents
+
+- [Description](#description)
+- [Link to App](#link-to-app)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Credits](#credits)
+- [License](#license)
 
 ## Description
 
@@ -8,9 +17,48 @@
 
 - The user asks a question and the app generates a random answer to help them come to a decision, while also finding something else to blame.
 
-## Installation
+## Link to App
 
-1. Run `npm i`.
-2. You will need an existing MySQL database.
-3. Create `.env` file with MySQL credentials for local development and a SECRET. Refer to [.env.EXAMPLE](./.env.EXAMPLE)
-4. Run `npm start` to start the app.
+Please go to ![Heroku Deployment Page](https://magic8-ezi.herokuapp.com/).
+
+## Usage
+
+1. Click Sign Up.
+2. Click the Magic 8 Ball.
+3. Submit a Question.
+4. Get an Answer.
+5. Click History to view your question and answer history.
+6. Log Out or Log In.
+
+## Screenshots
+
+The following images demonstrate the functionality of the app:
+
+### Home Page:
+
+![Home Page](./public/images/home.png) 
+
+### Magic Page:
+
+![Magic Page](./public/images/magic.png) 
+
+### History Page:
+
+![History Page](./public/images/history.png)
+
+## Credits 🏆
+
+Thank you, Elena!
+Thank you, Zack!
+Thank you, Ivo!
+Thank you, Wells!
+Thank you, John!
+
+## License
+
+None.
+
+
+
+
+
