@@ -19,7 +19,7 @@
 
 ## Link to App
 
-Please go to ![Heroku Deployment Page](https://magic8-ezi.herokuapp.com/).
+Please go to [Heroku Deployment Page](https://magic8-ezi.herokuapp.com/).
 
 ## Usage
 
