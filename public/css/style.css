@@ -82,7 +82,9 @@ input {
     font-weight: bolder;
   }
 
-
+  #answer {
+   font-size: 200%;
+  }
 }
 
 @media screen and (min-width: 476px) {
@@ -96,5 +98,4 @@ input {
     border-radius: 5px;
     width: 35%;
   }
-
 }
